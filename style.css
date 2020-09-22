@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+    background-color: rgb(11, 8, 32);
+}
+
+.clock {
+    opacity: 0;
+    position: relative;
+    margin: 20vh auto;
+    width: 500px;
+    height: 500px;
+    background-color: rgb(102, 10, 74);
+    border-radius: 50%;
+    border: 3px solid rgba(255, 0, 255, 0.295);
+    box-shadow: inset 0 0 30px 20px rgba(255, 0, 255, 0.295),
+                0 0 10px 10px rgba(230, 1, 161, 0.568);
+    
+}
+
+.arrows {
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    top: 250px;
+    left: 0px;
+    transform: rotate(90deg);
+}
+
+.arrows > .minutes {
+    background-color: rgb(255, 0, 140);
+    width: 50%;
+    border-radius: 10px;
+    height: 10px;
+    box-shadow: -5px -5px 10px 10px rgba(0, 0, 0, 0.192);
+    border-top: 3px solid rgb(255, 107, 230);
+}
+
+.arrows > .hours {
+    background-color: rgb(255, 5, 109);
+    border-radius: 10px;
+    width: 40%;
+    margin: 0 50px;
+    height: 15px;
+    box-shadow: -5px -5px 10px 10px rgba(0, 0, 0, 0.192);
+    border-top: 3px solid rgb(255, 107, 230);
+}
+
+.arrows > .seconds {
+    background-color: rgb(255, 89, 167);
+    width: 50%;
+    border-radius: 10px;
+    height: 7px;
+    box-shadow: -5px -5px 10px 10px rgba(0, 0, 0, 0.192);
+    border-top: 3px solid rgb(255, 107, 230);
+}
+
+.dot {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px 5px rgba(56, 10, 54, 0.781);
+    background-color: rgb(56, 10, 54);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.clock > span {
+    position: absolute;
+    color: rgba(0, 0, 0, 0.185);
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+
+.progress-bar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 25px;
+    width: 300px;
+    border-radius: 25px;
+    border: 2px solid white;
+    transition: .5;
+}
+
+.progress {
+    height: 25px;
+    width: 25px;
+    border-radius: 25px;
+    background-color: rgba(125, 246, 255, 0.473); 
+    transition: .5;
+}
+
+.progress-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 1;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.541);
+}
