@@ -1,8 +1,3 @@
-let time = new Date;
-
-console.log(time.getHours());
-console.log(time.getMinutes());
-
 const clock = document.getElementById("clock");
 const arrowM = document.getElementById("arrowM");
 const arrowH = document.getElementById("arrowH");
@@ -15,9 +10,7 @@ function getTime() {
 }
 
 function transformArrow() {
-    console.log((360/60) * 15 + 90)
-    arrowM.style.transform = `rotate(${(360/60)*15 + 90}deg)`;
-    // arrowM.style.transform = `rotate(${(360/60)*getTime().getMinutes() + 90}deg)`;
+    arrowM.style.transform = `rotate(${(360/60)*getTime().getMinutes() + 90}deg)`;
     arrowH.style.transform = `rotate(${(360/12)*getTime().getHours() + 90}deg)`;
     arrowS.style.transform = `rotate(${(360/60)*getTime().getSeconds() + 90}deg)`;
 }
